@@ -355,6 +355,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="flz-cn-Obj" kind="unwind" identifier="PickedCategory" unwindAction="categoryPickerDidPickCategory:" id="ZOv-e2-jx8"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -365,6 +368,7 @@
                     <navigationItem key="navigationItem" id="NSe-nc-dIW"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v2Q-Lt-6eB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="flz-cn-Obj" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3518" y="99"/>
         </scene>
