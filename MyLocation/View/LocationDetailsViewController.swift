@@ -44,6 +44,10 @@ class LocationDetailsViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func done() {
+        guard let mainView = navigationController?.parent?.view else { return }
+        let hudView = HudView.hud(inView: mainView, animated: true)
+        hudView.text = "Tagged"
+        
         navigationController?.popViewController(animated: true)
     }
     @IBAction func cancel() {
@@ -62,10 +66,12 @@ class LocationDetailsViewController: UITableViewController {
             target: self,
             action: #selector(hideKeyboard))
         gestureRecognizer.cancelsTouchesInView = false
+        
+        
         tableView.addGestureRecognizer(gestureRecognizer)
     }
     
-    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer){
+    @objc func hideKeyboard(_ gestureRecognizer: UIGestureRecognizer) {
         let point = gestureRecognizer.location(in: tableView)
         let indexPath = tableView.indexPathForRow(at: point)
         if indexPath != nil && indexPath!.section == 0 &&

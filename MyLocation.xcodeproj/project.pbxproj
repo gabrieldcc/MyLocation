@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		651F8D0A2909DAF2001DB3C7 /* CategoryPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D092909DAF2001DB3C7 /* CategoryPickerViewController.swift */; };
+		651F8D0C290C0D6D001DB3C7 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D0B290C0D6D001DB3C7 /* HudView.swift */; };
 		657745B12906D58C00F962D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B02906D58C00F962D9 /* AppDelegate.swift */; };
 		657745B32906D58C00F962D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B22906D58C00F962D9 /* SceneDelegate.swift */; };
 		657745B52906D58C00F962D9 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B42906D58C00F962D9 /* CurrentLocationViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		651F8D092909DAF2001DB3C7 /* CategoryPickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPickerViewController.swift; sourceTree = "<group>"; };
+		651F8D0B290C0D6D001DB3C7 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		657745AD2906D58C00F962D9 /* MyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657745B02906D58C00F962D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		657745B22906D58C00F962D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				657745B42906D58C00F962D9 /* CurrentLocationViewController.swift */,
 				657745E629097D6200F962D9 /* LocationDetailsViewController.swift */,
 				651F8D092909DAF2001DB3C7 /* CategoryPickerViewController.swift */,
+				651F8D0B290C0D6D001DB3C7 /* HudView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				657745B12906D58C00F962D9 /* AppDelegate.swift in Sources */,
 				657745BB2906D58C00F962D9 /* MyLocation.xcdatamodeld in Sources */,
 				657745B32906D58C00F962D9 /* SceneDelegate.swift in Sources */,
+				651F8D0C290C0D6D001DB3C7 /* HudView.swift in Sources */,
 				657745E729097D6200F962D9 /* LocationDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
