@@ -7,6 +7,7 @@
 
 import UIKit
 import CoreLocation
+import CoreData
 
 class LocationDetailsViewController: UITableViewController {
     
@@ -16,6 +17,8 @@ class LocationDetailsViewController: UITableViewController {
         longitude: 0)
     var placemark: CLPlacemark?
     var categoryName = "No Category"
+    var managedObjectContext: NSManagedObjectContext!
+    var date = Date()
     
     private let dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -31,6 +34,7 @@ class LocationDetailsViewController: UITableViewController {
         setLabels()
         categoryLabel.text = categoryName
         callHideKeyboard()
+        dateLabel.text = format(date: date)
         
     }
     
@@ -44,14 +48,28 @@ class LocationDetailsViewController: UITableViewController {
     
     // MARK: - Actions
     @IBAction func done() {
-        guard let mainView = navigationController?.parent?.view else { return }
         let hudView = HudView.hud(inView: mainView, animated: true)
         hudView.text = "Tagged"
-        
-        afterDelay(0.6, run: {
+        // 1
+        let location = Location(context: managedObjectContext)
+        // 2
+        location.locationDescription = descriptionTextView.text
+        location.category = categoryName
+        location.latitude = coordinate.latitude
+        location.longitude = coordinate.longitude
+        location.date = date
+        location.placemark = placemark
+        // 3
+        do {
+          try managedObjectContext.save()
+          afterDelay(0.6) {
             hudView.hide()
-            self.navigationController?.popViewController(animated: true)
-        })
+            self.navigationController?.popViewController(
+              animated: true)
+          }
+      } catch { // 4
+          fatalError("Error: \(error)")
+        }
     }
     
     @IBAction func cancel() {

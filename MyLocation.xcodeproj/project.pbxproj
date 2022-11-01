@@ -11,6 +11,8 @@
 		651F8D0C290C0D6D001DB3C7 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D0B290C0D6D001DB3C7 /* HudView.swift */; };
 		651F8D0E290C476D001DB3C7 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D0D290C476C001DB3C7 /* Functions.swift */; };
 		651F8D11290C592F001DB3C7 /* MyLocations.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D0F290C592F001DB3C7 /* MyLocations.xcdatamodeld */; };
+		651F8D16290D5C97001DB3C7 /* Location+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D14290D5C97001DB3C7 /* Location+CoreDataClass.swift */; };
+		651F8D17290D5C97001DB3C7 /* Location+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651F8D15290D5C97001DB3C7 /* Location+CoreDataProperties.swift */; };
 		657745B12906D58C00F962D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B02906D58C00F962D9 /* AppDelegate.swift */; };
 		657745B32906D58C00F962D9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B22906D58C00F962D9 /* SceneDelegate.swift */; };
 		657745B52906D58C00F962D9 /* CurrentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657745B42906D58C00F962D9 /* CurrentLocationViewController.swift */; };
@@ -46,6 +48,8 @@
 		651F8D0B290C0D6D001DB3C7 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
 		651F8D0D290C476C001DB3C7 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		651F8D10290C592F001DB3C7 /* MyLocations.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyLocations.xcdatamodel; sourceTree = "<group>"; };
+		651F8D14290D5C97001DB3C7 /* Location+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataClass.swift"; sourceTree = "<group>"; };
+		651F8D15290D5C97001DB3C7 /* Location+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		657745AD2906D58C00F962D9 /* MyLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		657745B02906D58C00F962D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		657745B22906D58C00F962D9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,15 @@
 			path = "Data Model";
 			sourceTree = "<group>";
 		};
+		651F8D18290FF90F001DB3C7 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				651F8D14290D5C97001DB3C7 /* Location+CoreDataClass.swift */,
+				651F8D15290D5C97001DB3C7 /* Location+CoreDataProperties.swift */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
 		657745A42906D58C00F962D9 = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +140,10 @@
 		657745AF2906D58C00F962D9 /* MyLocation */ = {
 			isa = PBXGroup;
 			children = (
+				657745C12906D58D00F962D9 /* Info.plist */,
+				651F8D18290FF90F001DB3C7 /* Core Data */,
 				651F8D13290C594F001DB3C7 /* Data Model */,
 				651F8D12290C5938001DB3C7 /* Functions */,
-				657745C12906D58D00F962D9 /* Info.plist */,
 				657745E52906D5B900F962D9 /* Resources */,
 				657745E42906D5A900F962D9 /* View */,
 				657745E32906D59700F962D9 /* AppDelegate */,
@@ -318,12 +332,14 @@
 			files = (
 				651F8D0A2909DAF2001DB3C7 /* CategoryPickerViewController.swift in Sources */,
 				657745B52906D58C00F962D9 /* CurrentLocationViewController.swift in Sources */,
+				651F8D17290D5C97001DB3C7 /* Location+CoreDataProperties.swift in Sources */,
 				657745B12906D58C00F962D9 /* AppDelegate.swift in Sources */,
 				651F8D11290C592F001DB3C7 /* MyLocations.xcdatamodeld in Sources */,
 				651F8D0E290C476D001DB3C7 /* Functions.swift in Sources */,
 				657745BB2906D58C00F962D9 /* MyLocation.xcdatamodeld in Sources */,
 				657745B32906D58C00F962D9 /* SceneDelegate.swift in Sources */,
 				651F8D0C290C0D6D001DB3C7 /* HudView.swift in Sources */,
+				651F8D16290D5C97001DB3C7 /* Location+CoreDataClass.swift in Sources */,
 				657745E729097D6200F962D9 /* LocationDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
